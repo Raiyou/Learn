@@ -88,7 +88,7 @@ public class Racing extends JFrame {
 					lanes[lane].setText(lanes[lane].getText() + ">");
 				}
 				try {
-					Thread.sleep(10 + (int)(Math.random()*200));
+					Thread.sleep(10 + (int)(Math.random()*200));	// 使執行緒延遲
 				} catch (InterruptedException e) {
 					break;
 				}
