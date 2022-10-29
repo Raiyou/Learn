@@ -19,7 +19,7 @@ public class Brad66 {
 			InputStream in = socket.getInputStream();
 			BufferedInputStream bin = new BufferedInputStream(in);
 			
-			FileOutputStream fout = new FileOutputStream("D:/dir1/" + ip + ".jpg");
+			FileOutputStream fout = new FileOutputStream("D:/JavaLearn/dir1/" + ip + ".jpg");
 			BufferedOutputStream bout = new BufferedOutputStream(fout);
 			
 			int len; byte[] buf = new byte[4*1024];

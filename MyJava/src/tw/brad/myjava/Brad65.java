@@ -15,7 +15,7 @@ public class Brad65 {
 			OutputStream out = socket.getOutputStream();
 			BufferedOutputStream bout = new BufferedOutputStream(out);
 			
-			FileInputStream fin = new FileInputStream("D:/dir1/coffee.jpg");
+			FileInputStream fin = new FileInputStream("D:/JavaLearn/dir1/coffee.jpg");
 			BufferedInputStream bin = new BufferedInputStream(fin);	// 串流用，效能較好
 			
 			int len; byte[] buf = new byte[8*1024];

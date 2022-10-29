@@ -20,7 +20,7 @@ public class Brad70 {
 			conn.connect();
 			BufferedOutputStream bout = 
 					new BufferedOutputStream(
-							new FileOutputStream("dir1/new_url2pdf.pdf"));
+							new FileOutputStream("D:/JavaLearn/dir1/new_url2pdf.pdf"));
 			
 			BufferedInputStream bin = new BufferedInputStream(conn.getInputStream());
 			int len; byte[] buf = new byte[16*1024];

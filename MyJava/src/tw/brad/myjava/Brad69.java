@@ -20,7 +20,7 @@ public class Brad69 {
 			conn.connect();
 			BufferedOutputStream bout = 
 					new BufferedOutputStream(
-							new FileOutputStream("D:/dir1/new_coffee.jpg"));
+							new FileOutputStream("D:/JavaLearn/dir1/new_coffee.jpg"));
 			
 			BufferedInputStream bin = new BufferedInputStream(conn.getInputStream());
 			int len; byte[] buf = new byte[16*1024];

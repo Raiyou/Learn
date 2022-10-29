@@ -22,7 +22,7 @@ public class Brad67 {
 			len = bin.read(buf);
 			
 			if (len > 0) {
-				FileOutputStream fout = new FileOutputStream("D:/dir1/" + ip + ".jpg");
+				FileOutputStream fout = new FileOutputStream("D:/JavaLearn/dir1/" + ip + ".jpg");
 				BufferedOutputStream bout = new BufferedOutputStream(fout);
 				bout.write(buf, 0, len);
 				

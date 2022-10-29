@@ -40,7 +40,7 @@ public class MyBalls extends JFrame {
 			setBackground(Color.YELLOW);
 			
 			try {
-				ballImg = ImageIO.read(new File("dir1/ball0.png"));
+				ballImg = ImageIO.read(new File("D:/JavaLearn/dir1/ball0.png"));
 			}catch (Exception e) {
 				
 			}

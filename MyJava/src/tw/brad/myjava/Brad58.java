@@ -16,7 +16,7 @@ public class Brad58 {
 		try {
 			ObjectOutputStream oout = 
 					new ObjectOutputStream(
-							new FileOutputStream("dir1/b.obj"));
+							new FileOutputStream("D:/JavaLearn/dir1/b.obj"));
 			
 			oout.writeObject(obj);
 			oout.flush();
@@ -33,7 +33,7 @@ public class Brad58 {
 		try {
 			ObjectInputStream oin = 
 					new ObjectInputStream(
-							new FileInputStream("dir1/b.obj"));
+							new FileInputStream("D:/JavaLearn/dir1/b.obj"));
 			
 			Object obj2 = oin.readObject();
 			oin.close();
