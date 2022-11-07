@@ -1,4 +1,4 @@
-package tw.brad.myjava;
+package tw.brad.myjava;	
 
 import java.io.FileOutputStream;
 import java.io.ObjectOutputStream;
@@ -10,7 +10,8 @@ public class Brad56 {
 		Student s1 = new Student("brad", 20, 30, 40);
 		System.out.printf("%s:%d:%f\n", s1.getName(), s1.score(), s1.avg());
 		Student s2 = new Student("eric", 60, 70, 80);
-		System.out.printf("%s:%d:%f\n", s2.getName(), s2.score(), s2.avg());
+		System.out.printf("%s:%d:%f\n", s2.getName(), s2.score(), s2.avg());	
+		
 		try {
 			ObjectOutputStream oout = 
 				new ObjectOutputStream(new FileOutputStream("D:/JavaLearn/dir1/brad.score"));
@@ -38,3 +39,4 @@ class Student implements Serializable{	// 必須宣告實作可序列化，否�
 	int score() {return ch+eng + math;}
 	double avg() {return score() / 3.0;}
 }
+
