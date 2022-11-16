@@ -17,11 +17,14 @@ public class JDBC03 {
 				"jdbc:mysql://localhost:3306/eeit53",
 				prop);
 			// 3. SQL statement
-			String sql1 = "INSERT INTO cust (cname,tel,birthday) VALUES" + "('tony','111','1999-01-02')";
+			String sql1 = "INSERT INTO cust (cname,tel,birthday) VALUES ('tony','111','1999-01-02')";
 			String sql2 = "SELECT * FROM cust";
 			Statement stmt = conn.createStatement();
 			int count = stmt.executeUpdate(sql1);
-
+			boolean b = stmt.execute(sql2);
+			System.out.println(count);
+			System.out.println(b);
+			
 			conn.close();
 			System.out.println("OK2");
 		} catch (Exception e) {

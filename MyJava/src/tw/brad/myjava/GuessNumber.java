@@ -87,7 +87,7 @@ public class GuessNumber extends JFrame implements ActionListener{
 		counter++;
 		String result = checkAB();
 		log.append(counter + ". " + input.getText() + ":" + result + "\n");
-		if (result.equals("3A0B")) {
+		if (result.equals("4A0B")) {
 			JOptionPane.showMessageDialog(null, "恭喜老爺");
 			newRound();
 		}else if ( counter == 10) {

@@ -24,7 +24,7 @@ public class JDBC04 {
 			String sql2 = "DELETE FROM cust WHERE id >= 4";
 			String sql3 = "UPDATE cust SET cname='eric', tel='777' WHERE id = 3";
 			Statement stmt = conn.createStatement();
-			int count = stmt.executeUpdate(sql3);
+			int count = stmt.executeUpdate(sql1);
 			System.out.println(count);
 			
 			conn.close();

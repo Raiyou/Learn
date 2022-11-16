@@ -26,7 +26,7 @@ public class JDBC07 {
 
 			String sql = "SELECT * FROM food WHERE name LIKE ? OR addr LIKE ?";
 			PreparedStatement pstmt = conn.prepareStatement(sql);
-			pstmt.setString(1, "%" + key + "%");
+			pstmt.setString(1, "%" + key + "%");	// SQL命令-關鍵字查詢: %key%
 			pstmt.setString(2, "%" + key + "%");
 			ResultSet rs = pstmt.executeQuery();
 			

@@ -16,7 +16,7 @@ public class JDBC01 {
 			System.out.println(e);
 		}
 		// 2. Create Connection
-		// ?ms sql server: jdbc:sqlserver://localhost;database=eeit53;
+		// MSSQL server = jdbc:sqlserver://localhost;databaseName=eeit53;user=MyUserName;password=*****;
 		try {
 			Connection conn = DriverManager.getConnection(
 					"jdbc:mysql://localhost:3306/eeit53?user=root&password=root");

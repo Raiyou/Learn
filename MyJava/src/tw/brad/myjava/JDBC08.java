@@ -23,18 +23,26 @@ public class JDBC08 {
 		int rpp = 10;	// row per page
 		int start = (page - 1) * rpp;
 		
+		
+		try {
+			Connection conn2 = DriverManager.getConnection("jdbc:mysql://localhost:3306/eeit53", prop);
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+		}
+		
 		try {
 			Connection conn = 
 					DriverManager.getConnection(
 							"jdbc:mysql://localhost:3306/eeit53", prop);
 
-//			String sql0 = "SELECT count(*) count FROM food"; // count(*) AS count 其中AS可省略
-//			Statement stmt = conn.createStatement();
-//	
-//			ResultSet rs0 = stmt.executeQuery(sql0);
-//			rs0.next();
-//			int total = rs0.getInt("count");
-//			int totalPage = total / rpp + 1;
+			String sql0 = "SELECT count(*) count FROM food"; // count(*) AS count 其中AS可省略
+			Statement stmt = conn.createStatement();
+	
+			ResultSet rs0 = stmt.executeQuery(sql0);
+			rs0.next();
+			int total = rs0.getInt("count");
+			int totalPage = (int)Math.ceil(total*1.0 / rpp);	// 乘以1.0轉為double
 			
 			
 			String sql = String.format("SELECT * FROM food LIMIT %d, %d", start, rpp);
@@ -50,11 +58,20 @@ public class JDBC08 {
 			rs.close();
 			
 			conn.close();
-		} catch (Exception e) {
 			
+
+		} catch (Exception e) {
+				
 		}
-		
 		
 	}
 
 }
+class MyException extends Exception{
+	public MyException() {
+		super("Brad Exception");
+	}
+}
+
+
+

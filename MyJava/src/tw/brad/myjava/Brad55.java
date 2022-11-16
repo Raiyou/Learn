@@ -42,7 +42,7 @@ public class Brad55 {
 		try (FileReader reader = new FileReader("D:/JavaLearn/dir1/sieve.csv");
 				BufferedReader br = new BufferedReader(reader);
 				){
-			String line; int i = 1;
+			String line;
 			br.readLine();
 			while ( (line = br.readLine()) != null ) {
 				String[] data = line.split(",");

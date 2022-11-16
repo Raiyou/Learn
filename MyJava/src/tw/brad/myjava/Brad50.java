@@ -10,7 +10,7 @@ public class Brad50 {
 	public static void main(String[] args) {
 		FileInputStream fin = null;
 		try {
-			File file = new File("D:/JavaLearn/dir/file1.txt");
+			File file = new File("D:/JavaLearn/dir1/file1.txt");
 			fin = new FileInputStream(file);
 			byte[] buf = new byte[(int)file.length()];
 			fin.read(buf);
